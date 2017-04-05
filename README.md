@@ -6,6 +6,10 @@ to develop Symfony applications following the recommended best practices.
 
 [![Build Status](https://travis-ci.org/symfony/symfony-demo.svg?branch=master)](https://travis-ci.org/symfony/symfony-demo)
 
+Capistrano (Automatic deployment)
+------------
+$ cap staging deploy composer:install
+
 Requirements
 ------------
 
