@@ -1,0 +1,2188 @@
+# Logfile created on 2017-04-05 11:50:42 +0200 by logger.rb/v1.2.7
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 11:50:42 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c24be6a3] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [c24be6a3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f33d8322] Running /usr/bin/env #<StringIO:0x00000001fb3870> /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [f33d8322] Command: /usr/bin/env #<StringIO:0x00000001fb3870> /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [efede815] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [efede815] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [2941d220] Running /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD as ubuntu@62.4.19.91
+ DEBUG [2941d220] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD )
+  INFO [18b6da19] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo/www/shared /home/ubuntu/symfony-demo/www/releases as ubuntu@62.4.19.91
+ DEBUG [18b6da19] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo/www/shared /home/ubuntu/symfony-demo/www/releases
+ DEBUG [9f6cb76b] Running [ -f /home/ubuntu/symfony-demo/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [9f6cb76b] Command: [ -f /home/ubuntu/symfony-demo/www/current/REVISION ]
+ DEBUG [82cae6e3] Running /usr/bin/env cat /home/ubuntu/symfony-demo/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [82cae6e3] Command: /usr/bin/env cat /home/ubuntu/symfony-demo/www/current/REVISION 2>/dev/null
+ DEBUG [019250f6] Running [ -f /home/ubuntu/symfony-demo/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [019250f6] Command: [ -f /home/ubuntu/symfony-demo/www/repo/HEAD ]
+  INFO The repository mirror is at /home/ubuntu/symfony-demo/www/repo
+ DEBUG [c1f65b0d] Running if test ! -d /home/ubuntu/symfony-demo/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [c1f65b0d] Command: if test ! -d /home/ubuntu/symfony-demo/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/repo'" 1>&2; false; fi
+  INFO [485fe899] Running /usr/bin/env git remote set-url origin ubuntu@62.4.19.91:symfony-demo as ubuntu@62.4.19.91
+ DEBUG [485fe899] Command: cd /home/ubuntu/symfony-demo/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin ubuntu@62.4.19.91:symfony-demo )
+  INFO [3dd2b453] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [3dd2b453] Command: cd /home/ubuntu/symfony-demo/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f148ab32] Running if test ! -d /home/ubuntu/symfony-demo/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [f148ab32] Command: if test ! -d /home/ubuntu/symfony-demo/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/repo'" 1>&2; false; fi
+  INFO [23ac20a9] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo/www/releases/20170405095042 as ubuntu@62.4.19.91
+ DEBUG [23ac20a9] Command: cd /home/ubuntu/symfony-demo/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo/www/releases/20170405095042 )
+  INFO [a35dad18] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo/www/releases/20170405095042 as ubuntu@62.4.19.91
+ DEBUG [a35dad18] Command: cd /home/ubuntu/symfony-demo/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo/www/releases/20170405095042 )
+ DEBUG [b9927dbd] Running if test ! -d /home/ubuntu/symfony-demo/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [b9927dbd] Command: if test ! -d /home/ubuntu/symfony-demo/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/repo'" 1>&2; false; fi
+ DEBUG [e96bdbc6] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [e96bdbc6] Command: cd /home/ubuntu/symfony-demo/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [43afb3eb] Running if test ! -d /home/ubuntu/symfony-demo/www/releases/20170405095042; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/releases/20170405095042'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [43afb3eb] Command: if test ! -d /home/ubuntu/symfony-demo/www/releases/20170405095042; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/releases/20170405095042'" 1>&2; false; fi
+  INFO [c9c54d03] Running /usr/bin/env echo "" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [c9c54d03] Command: cd /home/ubuntu/symfony-demo/www/releases/20170405095042 && /usr/bin/env echo "" >> REVISION
+  INFO [b79b6b09] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo/www/releases/20170405095042 /home/ubuntu/symfony-demo/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [b79b6b09] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo/www/releases/20170405095042 /home/ubuntu/symfony-demo/www/releases/current
+  INFO [05ef4376] Running /usr/bin/env mv /home/ubuntu/symfony-demo/www/releases/current /home/ubuntu/symfony-demo/www as ubuntu@62.4.19.91
+ DEBUG [05ef4376] Command: /usr/bin/env mv /home/ubuntu/symfony-demo/www/releases/current /home/ubuntu/symfony-demo/www
+ DEBUG [f4486961] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo/www/releases as ubuntu@62.4.19.91
+ DEBUG [f4486961] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo/www/releases
+ DEBUG [90bc8f9f] Running if test ! -d /home/ubuntu/symfony-demo/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [90bc8f9f] Command: if test ! -d /home/ubuntu/symfony-demo/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo/www/releases'" 1>&2; false; fi
+  INFO [a97c95b9] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170405095042 by yohan" >> /home/ubuntu/symfony-demo/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [a97c95b9] Command: cd /home/ubuntu/symfony-demo/www/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170405095042 by yohan" >> /home/ubuntu/symfony-demo/www/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 11:51:01 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6135488a] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [6135488a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6135488a] Finished in 0.590 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [19c330ee] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [19c330ee] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [19c330ee] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [c6d3f4ff] Running /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD as ubuntu@62.4.19.91
+ DEBUG [c6d3f4ff] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD )
+ DEBUG [c6d3f4ff] 	/usr/bin/env: git: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 11:55:16 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9f833709] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [9f833709] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9f833709] Finished in 1.028 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [7a042c4d] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [7a042c4d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [7a042c4d] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [3dc44e95] Running /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD as ubuntu@62.4.19.91
+ DEBUG [3dc44e95] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD )
+ DEBUG [3dc44e95] 	ssh: connect to host 62.4.19.91 port 22: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 11:58:09 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [45cacd46] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [45cacd46] Command: /usr/bin/env mkdir -p /tmp
+  INFO [45cacd46] Finished in 0.757 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [b9b603fe] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [b9b603fe] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [b9b603fe] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [68cae1a0] Running /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD as ubuntu@62.4.19.91
+ DEBUG [68cae1a0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD )
+ DEBUG [68cae1a0] 	ssh: connect to host 62.4.19.91 port 22: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:13:10 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4399d02e] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [4399d02e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4399d02e] Finished in 0.992 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [ae2fc9b5] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [ae2fc9b5] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [ae2fc9b5] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [44ee5380] Running /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD as ubuntu@62.4.19.91
+ DEBUG [44ee5380] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote ubuntu@62.4.19.91:symfony-demo HEAD )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:20:51 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [39959ff1] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [39959ff1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [39959ff1] Finished in 0.846 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [57fe6f65] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [57fe6f65] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [57fe6f65] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [042b2283] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [042b2283] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [042b2283] 	Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+ DEBUG [042b2283] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [042b2283] Finished in 1.197 seconds with exit status 0 (successful).
+  INFO [a89ee892] Running /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/www/shared ubuntu@62.4.19.91:symfony-demo/www/releases as ubuntu@62.4.19.91
+ DEBUG [a89ee892] Command: /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/www/shared ubuntu@62.4.19.91:symfony-demo/www/releases
+  INFO [a89ee892] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [b59e97f4] Running [ -f ubuntu@62.4.19.91:symfony-demo/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [b59e97f4] Command: [ -f ubuntu@62.4.19.91:symfony-demo/www/current/REVISION ]
+ DEBUG [b59e97f4] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [5e9fe930] Running [ -f ubuntu@62.4.19.91:symfony-demo/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [5e9fe930] Command: [ -f ubuntu@62.4.19.91:symfony-demo/www/repo/HEAD ]
+ DEBUG [5e9fe930] Finished in 0.017 seconds with exit status 1 (failed).
+ DEBUG [40fdab0f] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/www; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/www'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [40fdab0f] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/www; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/www'" 1>&2; false; fi
+ DEBUG [40fdab0f] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [b861a5ba] Running /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/www/repo as ubuntu@62.4.19.91
+ DEBUG [b861a5ba] Command: cd ubuntu@62.4.19.91:symfony-demo/www && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/www/repo )
+ DEBUG [b861a5ba] 	Cloning into bare repository 'ubuntu@62.4.19.91:symfony-demo/www/repo'...
+ DEBUG [b861a5ba] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+  INFO [b861a5ba] Finished in 7.175 seconds with exit status 0 (successful).
+ DEBUG [bfbe0f09] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/www/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [bfbe0f09] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/www/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/www/repo'" 1>&2; false; fi
+ DEBUG [bfbe0f09] 	Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/www/repo'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:22:12 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [029901d6] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [029901d6] Command: /usr/bin/env mkdir -p /tmp
+  INFO [029901d6] Finished in 0.759 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [81fd721e] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [81fd721e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [81fd721e] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [a5492aaa] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [a5492aaa] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [a5492aaa] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [a5492aaa] Finished in 1.188 seconds with exit status 0 (successful).
+  INFO [b8437e7e] Running /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases as ubuntu@62.4.19.91
+ DEBUG [b8437e7e] Command: /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases
+  INFO [b8437e7e] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [58c6b51b] Running [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [58c6b51b] Command: [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ]
+ DEBUG [58c6b51b] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [bd064455] Running [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [bd064455] Command: [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ]
+ DEBUG [bd064455] Finished in 0.021 seconds with exit status 1 (failed).
+ DEBUG [c20cb7c6] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [c20cb7c6] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi
+ DEBUG [c20cb7c6] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [bdfa02d7] Running /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo as ubuntu@62.4.19.91
+ DEBUG [bdfa02d7] Command: cd ubuntu@62.4.19.91:symfony-demo/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo )
+ DEBUG [bdfa02d7] 	Cloning into bare repository 'ubuntu@62.4.19.91:symfony-demo/repo'...
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:23:05 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8ac98ee1] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [8ac98ee1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8ac98ee1] Finished in 1.036 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [943d78c8] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [943d78c8] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [943d78c8] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [8cb40dd5] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [8cb40dd5] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [8cb40dd5] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [8cb40dd5] Finished in 1.407 seconds with exit status 0 (successful).
+  INFO [833d8524] Running /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases as ubuntu@62.4.19.91
+ DEBUG [833d8524] Command: /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases
+  INFO [833d8524] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [ada51dc5] Running [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [ada51dc5] Command: [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ]
+ DEBUG [ada51dc5] Finished in 0.025 seconds with exit status 1 (failed).
+ DEBUG [d7fe639b] Running [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [d7fe639b] Command: [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ]
+ DEBUG [d7fe639b] Finished in 0.016 seconds with exit status 1 (failed).
+ DEBUG [8d1ea87d] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [8d1ea87d] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi
+ DEBUG [8d1ea87d] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [5edcc13c] Running /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo as ubuntu@62.4.19.91
+ DEBUG [5edcc13c] Command: cd ubuntu@62.4.19.91:symfony-demo/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo )
+ DEBUG [5edcc13c] 	fatal: destination path 'ubuntu@62.4.19.91:symfony-demo/repo' already exists and is not an empty directory.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:24:58 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4bb4b903] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [4bb4b903] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4bb4b903] Finished in 0.786 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [00004c89] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [00004c89] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [00004c89] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [fed50c3b] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [fed50c3b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [fed50c3b] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [fed50c3b] Finished in 1.605 seconds with exit status 0 (successful).
+  INFO [d9634850] Running /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases as ubuntu@62.4.19.91
+ DEBUG [d9634850] Command: /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases
+  INFO [d9634850] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [88a55a85] Running [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [88a55a85] Command: [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ]
+ DEBUG [88a55a85] Finished in 0.017 seconds with exit status 1 (failed).
+ DEBUG [60795004] Running [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [60795004] Command: [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ]
+ DEBUG [60795004] Finished in 0.017 seconds with exit status 1 (failed).
+ DEBUG [9d29667f] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [9d29667f] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi
+ DEBUG [9d29667f] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [d25e47e6] Running /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo as ubuntu@62.4.19.91
+ DEBUG [d25e47e6] Command: cd ubuntu@62.4.19.91:symfony-demo/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo )
+ DEBUG [d25e47e6] 	Cloning into bare repository 'ubuntu@62.4.19.91:symfony-demo/repo'...
+  INFO [d25e47e6] Finished in 10.763 seconds with exit status 0 (successful).
+ DEBUG [cce9d1c6] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [cce9d1c6] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'" 1>&2; false; fi
+ DEBUG [cce9d1c6] 	Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:28:15 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [706cc2a4] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [706cc2a4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [706cc2a4] Finished in 0.829 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [c8e561b4] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [c8e561b4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [c8e561b4] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [b85ee998] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [b85ee998] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [b85ee998] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [b85ee998] Finished in 1.389 seconds with exit status 0 (successful).
+  INFO [b30e26c5] Running /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases as ubuntu@62.4.19.91
+ DEBUG [b30e26c5] Command: /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases
+  INFO [b30e26c5] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [21918f12] Running [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [21918f12] Command: [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ]
+ DEBUG [21918f12] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [0023e6ed] Running [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [0023e6ed] Command: [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ]
+ DEBUG [0023e6ed] Finished in 0.019 seconds with exit status 1 (failed).
+ DEBUG [50d37e81] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [50d37e81] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi
+ DEBUG [50d37e81] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [46d13712] Running /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo as ubuntu@62.4.19.91
+ DEBUG [46d13712] Command: cd ubuntu@62.4.19.91:symfony-demo/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo )
+ DEBUG [46d13712] 	Cloning into bare repository 'ubuntu@62.4.19.91:symfony-demo/repo'...
+  INFO [46d13712] Finished in 10.340 seconds with exit status 0 (successful).
+ DEBUG [034d59cb] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [034d59cb] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'" 1>&2; false; fi
+ DEBUG [034d59cb] 	Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:31:20 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a91d0dd0] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [a91d0dd0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a91d0dd0] Finished in 0.916 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [27dd6e42] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [27dd6e42] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [27dd6e42] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [a3439e07] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [a3439e07] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [a3439e07] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [a3439e07] Finished in 1.371 seconds with exit status 0 (successful).
+  INFO [f821eca8] Running /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases as ubuntu@62.4.19.91
+ DEBUG [f821eca8] Command: /usr/bin/env mkdir -p ubuntu@62.4.19.91:symfony-demo/shared ubuntu@62.4.19.91:symfony-demo/releases
+  INFO [f821eca8] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [f6ef978e] Running [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [f6ef978e] Command: [ -f ubuntu@62.4.19.91:symfony-demo/current/REVISION ]
+ DEBUG [f6ef978e] Finished in 0.024 seconds with exit status 1 (failed).
+ DEBUG [594ef5e8] Running [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [594ef5e8] Command: [ -f ubuntu@62.4.19.91:symfony-demo/repo/HEAD ]
+ DEBUG [594ef5e8] Finished in 0.017 seconds with exit status 1 (failed).
+ DEBUG [6774c58e] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [6774c58e] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/'" 1>&2; false; fi
+ DEBUG [6774c58e] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [33f218c9] Running /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo as ubuntu@62.4.19.91
+ DEBUG [33f218c9] Command: cd ubuntu@62.4.19.91:symfony-demo/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git ubuntu@62.4.19.91:symfony-demo/repo )
+ DEBUG [33f218c9] 	Cloning into bare repository 'ubuntu@62.4.19.91:symfony-demo/repo'...
+  INFO [33f218c9] Finished in 9.151 seconds with exit status 0 (successful).
+ DEBUG [8d1354f1] Running if test ! -d ubuntu@62.4.19.91:symfony-demo/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [8d1354f1] Command: if test ! -d ubuntu@62.4.19.91:symfony-demo/repo; then echo "Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'" 1>&2; false; fi
+ DEBUG [8d1354f1] 	Directory does not exist 'ubuntu@62.4.19.91:symfony-demo/repo'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:32:46 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [674609a7] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [674609a7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [674609a7] Finished in 1.038 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [d641856b] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [d641856b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [d641856b] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [853b642b] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [853b642b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [853b642b] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [853b642b] Finished in 1.344 seconds with exit status 0 (successful).
+  INFO [93b6d441] Running /usr/bin/env mkdir -p /symfony-demo/shared /symfony-demo/releases as ubuntu@62.4.19.91
+ DEBUG [93b6d441] Command: /usr/bin/env mkdir -p /symfony-demo/shared /symfony-demo/releases
+ DEBUG [93b6d441] 	mkdir: 
+ DEBUG [93b6d441] 	cannot create directory '/symfony-demo'
+ DEBUG [93b6d441] 	: Permission denied
+ DEBUG [93b6d441] 	
+ DEBUG [93b6d441] 	mkdir: 
+ DEBUG [93b6d441] 	cannot create directory '/symfony-demo'
+ DEBUG [93b6d441] 	: Permission denied
+ DEBUG [93b6d441] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:34:40 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [04918939] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [04918939] Command: /usr/bin/env mkdir -p /tmp
+  INFO [04918939] Finished in 0.980 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [e284a03e] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [e284a03e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [e284a03e] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [3f390577] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [3f390577] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [3f390577] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [3f390577] Finished in 1.429 seconds with exit status 0 (successful).
+  INFO [30bff397] Running /usr/bin/env mkdir -p /symfony-demo/www/shared /symfony-demo/www/releases as ubuntu@62.4.19.91
+ DEBUG [30bff397] Command: /usr/bin/env mkdir -p /symfony-demo/www/shared /symfony-demo/www/releases
+ DEBUG [30bff397] 	mkdir: 
+ DEBUG [30bff397] 	cannot create directory '/symfony-demo'
+ DEBUG [30bff397] 	: Permission denied
+ DEBUG [30bff397] 	
+ DEBUG [30bff397] 	mkdir: 
+ DEBUG [30bff397] 	cannot create directory '/symfony-demo'
+ DEBUG [30bff397] 	: Permission denied
+ DEBUG [30bff397] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:34:57 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [be29f213] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [be29f213] Command: /usr/bin/env mkdir -p /tmp
+  INFO [be29f213] Finished in 0.581 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [ca346276] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [ca346276] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [ca346276] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [7c820199] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [7c820199] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [7c820199] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [7c820199] Finished in 1.427 seconds with exit status 0 (successful).
+  INFO [fcb9d6cc] Running /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [fcb9d6cc] Command: /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases
+ DEBUG [fcb9d6cc] 	mkdir: 
+ DEBUG [fcb9d6cc] 	cannot create directory '/symfony-demo-1'
+ DEBUG [fcb9d6cc] 	: Permission denied
+ DEBUG [fcb9d6cc] 	
+ DEBUG [fcb9d6cc] 	mkdir: 
+ DEBUG [fcb9d6cc] 	cannot create directory '/symfony-demo-1'
+ DEBUG [fcb9d6cc] 	: Permission denied
+ DEBUG [fcb9d6cc] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:35:09 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [be80f012] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [be80f012] Command: /usr/bin/env mkdir -p /tmp
+  INFO [be80f012] Finished in 6.352 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-root.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-root.sh 100.0%
+  INFO [7152632c] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-root.sh as ubuntu@62.4.19.91
+ DEBUG [7152632c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-root.sh
+  INFO [7152632c] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [18378ba7] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [18378ba7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-root.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [18378ba7] 	Error reading response length from authentication socket.
+ DEBUG [18378ba7] 	Permission denied (publickey).
+ DEBUG [18378ba7] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:35:45 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [963156a7] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [963156a7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [963156a7] Finished in 0.729 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [e55637e8] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [e55637e8] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [e55637e8] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [2e3afce2] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [2e3afce2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [2e3afce2] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [2e3afce2] Finished in 1.209 seconds with exit status 0 (successful).
+  INFO [e8da07d5] Running /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [e8da07d5] Command: /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases
+ DEBUG [e8da07d5] 	mkdir: 
+ DEBUG [e8da07d5] 	cannot create directory '/symfony-demo-1'
+ DEBUG [e8da07d5] 	: Permission denied
+ DEBUG [e8da07d5] 	
+ DEBUG [e8da07d5] 	mkdir: 
+ DEBUG [e8da07d5] 	cannot create directory '/symfony-demo-1'
+ DEBUG [e8da07d5] 	: Permission denied
+ DEBUG [e8da07d5] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 12:44:07 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a7f45420] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [a7f45420] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a7f45420] Finished in 0.862 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [d5849f6c] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [d5849f6c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [d5849f6c] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [43fc6ca4] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [43fc6ca4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [43fc6ca4] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [43fc6ca4] Finished in 1.403 seconds with exit status 0 (successful).
+  INFO [36cd5c3b] Running /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [36cd5c3b] Command: /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases
+ DEBUG [36cd5c3b] 	mkdir: 
+ DEBUG [36cd5c3b] 	cannot create directory '/symfony-demo-1'
+ DEBUG [36cd5c3b] 	: Permission denied
+ DEBUG [36cd5c3b] 	
+ DEBUG [36cd5c3b] 	mkdir: 
+ DEBUG [36cd5c3b] 	cannot create directory '/symfony-demo-1'
+ DEBUG [36cd5c3b] 	: Permission denied
+ DEBUG [36cd5c3b] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 13:14:16 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0a57d8b7] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [0a57d8b7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0a57d8b7] Finished in 0.870 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [c4ca561c] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [c4ca561c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [c4ca561c] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [f1fe5a08] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [f1fe5a08] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [f1fe5a08] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [f1fe5a08] Finished in 1.289 seconds with exit status 0 (successful).
+  INFO [5ae35795] Running /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [5ae35795] Command: /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases
+ DEBUG [5ae35795] 	mkdir: 
+ DEBUG [5ae35795] 	cannot create directory '/symfony-demo-1'
+ DEBUG [5ae35795] 	: Permission denied
+ DEBUG [5ae35795] 	
+ DEBUG [5ae35795] 	mkdir: 
+ DEBUG [5ae35795] 	cannot create directory '/symfony-demo-1'
+ DEBUG [5ae35795] 	: Permission denied
+ DEBUG [5ae35795] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:17:55 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ec7bf2bc] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [ec7bf2bc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ec7bf2bc] Finished in 0.507 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [5253112f] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [5253112f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [5253112f] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [93e48e45] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [93e48e45] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [93e48e45] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [93e48e45] Finished in 1.215 seconds with exit status 0 (successful).
+  INFO [cfedbaeb] Running /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [cfedbaeb] Command: /usr/bin/env mkdir -p /symfony-demo-1/www/shared /symfony-demo-1/www/releases
+ DEBUG [cfedbaeb] 	mkdir: 
+ DEBUG [cfedbaeb] 	cannot create directory '/symfony-demo-1'
+ DEBUG [cfedbaeb] 	: Permission denied
+ DEBUG [cfedbaeb] 	
+ DEBUG [cfedbaeb] 	mkdir: 
+ DEBUG [cfedbaeb] 	cannot create directory '/symfony-demo-1'
+ DEBUG [cfedbaeb] 	: Permission denied
+ DEBUG [cfedbaeb] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:18:38 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1ae7eedb] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [1ae7eedb] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1ae7eedb] Finished in 0.896 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [3b4c739f] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [3b4c739f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [3b4c739f] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [27a350a0] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [27a350a0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [27a350a0] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [27a350a0] Finished in 1.494 seconds with exit status 0 (successful).
+  INFO [4d3a9e74] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [4d3a9e74] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [4d3a9e74] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [f7e79568] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [f7e79568] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [f7e79568] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [1d30836f] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [1d30836f] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [1d30836f] Finished in 0.021 seconds with exit status 1 (failed).
+ DEBUG [200c8c9d] Running if test ! -d /home/ubuntu/symfony-demo-1/www; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [200c8c9d] Command: if test ! -d /home/ubuntu/symfony-demo-1/www; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www'" 1>&2; false; fi
+ DEBUG [200c8c9d] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [19861be2] Running /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git /home/ubuntu/symfony-demo-1/www/repo as ubuntu@62.4.19.91
+ DEBUG [19861be2] Command: cd /home/ubuntu/symfony-demo-1/www && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git clone --mirror git@github.com:Yhnlvy/symfony-demo-1.git /home/ubuntu/symfony-demo-1/www/repo )
+ DEBUG [19861be2] 	Cloning into bare repository '/home/ubuntu/symfony-demo-1/www/repo'...
+  INFO [19861be2] Finished in 9.416 seconds with exit status 0 (successful).
+ DEBUG [050434a1] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [050434a1] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [050434a1] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [fbf52fff] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [fbf52fff] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [fbf52fff] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [7ae7b64c] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [7ae7b64c] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7ae7b64c] 	Fetching origin
+  INFO [7ae7b64c] Finished in 1.375 seconds with exit status 0 (successful).
+ DEBUG [52806191] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [52806191] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [52806191] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [9e9bc84e] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405121840 as ubuntu@62.4.19.91
+ DEBUG [9e9bc84e] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405121840 )
+  INFO [9e9bc84e] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [ec16c5b3] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405121840 as ubuntu@62.4.19.91
+ DEBUG [ec16c5b3] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405121840 )
+  INFO [ec16c5b3] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [0f9787f3] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [0f9787f3] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [0f9787f3] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [1cd1e36d] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [1cd1e36d] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1cd1e36d] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [1cd1e36d] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [723b4bf2] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405121840; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405121840'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [723b4bf2] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405121840; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405121840'" 1>&2; false; fi
+ DEBUG [723b4bf2] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [f48cd087] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [f48cd087] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405121840 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [f48cd087] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [2e0601d0] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405121840 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [2e0601d0] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405121840 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [2e0601d0] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [821eeb67] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [821eeb67] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [821eeb67] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [382bb174] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [382bb174] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [382bb174] 	20170405121840
+ DEBUG [382bb174] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [a9779b53] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [a9779b53] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [a9779b53] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [b66d2b85] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405121840 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [b66d2b85] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405121840 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [b66d2b85] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:41:16 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [23b4d438] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [23b4d438] Command: /usr/bin/env mkdir -p /tmp
+  INFO [23b4d438] Finished in 0.772 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [04189582] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [04189582] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [04189582] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [c284f63d] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [c284f63d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [c284f63d] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [c284f63d] Finished in 1.315 seconds with exit status 0 (successful).
+  INFO [1f7c1009] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [1f7c1009] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [1f7c1009] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [3d6337a9] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [3d6337a9] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [3d6337a9] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [d6d984a5] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [d6d984a5] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [d6d984a5] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [d6d984a5] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [392c4cfe] Running if test ! -d; then echo "Directory does not exist ''" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [392c4cfe] Command: if test ! -d; then echo "Directory does not exist ''" 1>&2; false; fi
+ DEBUG [392c4cfe] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [109d07a3] Running php /home/ubuntu/symfony-demo-1/www/shared/composer.phar install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader as ubuntu@62.4.19.91
+ DEBUG [109d07a3] Command: cd  && php /home/ubuntu/symfony-demo-1/www/shared/composer.phar install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader
+ DEBUG [109d07a3] 	Could not open input file: /home/ubuntu/symfony-demo-1/www/shared/composer.phar
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:41:40 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1a07f4dc] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [1a07f4dc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1a07f4dc] Finished in 0.952 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [1c5234f0] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [1c5234f0] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [1c5234f0] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [91bdf5ce] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [91bdf5ce] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [91bdf5ce] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [91bdf5ce] Finished in 1.376 seconds with exit status 0 (successful).
+  INFO [365902b5] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [365902b5] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [365902b5] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [f727f59c] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [f727f59c] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [f727f59c] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [c7740287] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [c7740287] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [c7740287] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [c7740287] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [7ddb1c10] Running if test ! -d; then echo "Directory does not exist ''" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [7ddb1c10] Command: if test ! -d; then echo "Directory does not exist ''" 1>&2; false; fi
+ DEBUG [7ddb1c10] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [5ee3b1d9] Running /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader as ubuntu@62.4.19.91
+ DEBUG [5ee3b1d9] Command: cd  && /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:46:29 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3a743b00] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [3a743b00] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3a743b00] Finished in 0.925 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [4c355262] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [4c355262] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [4c355262] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [f8ab9937] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [f8ab9937] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [f8ab9937] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [f8ab9937] Finished in 1.400 seconds with exit status 0 (successful).
+  INFO [0544f805] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [0544f805] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [0544f805] Finished in 0.029 seconds with exit status 0 (successful).
+ DEBUG [976e9b39] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [976e9b39] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [976e9b39] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [4164ea40] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [4164ea40] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [4164ea40] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [4164ea40] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [34153d7e] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [34153d7e] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [34153d7e] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [b0ba8bc3] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [b0ba8bc3] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [b0ba8bc3] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [906b77ec] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [906b77ec] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [906b77ec] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [2999ab95] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [2999ab95] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2999ab95] 	Fetching origin
+  INFO [2999ab95] Finished in 1.483 seconds with exit status 0 (successful).
+ DEBUG [3e6c352b] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [3e6c352b] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [3e6c352b] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [5f4501e8] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405124632 as ubuntu@62.4.19.91
+ DEBUG [5f4501e8] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405124632 )
+  INFO [5f4501e8] Finished in 0.032 seconds with exit status 0 (successful).
+  INFO [685c783d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405124632 as ubuntu@62.4.19.91
+ DEBUG [685c783d] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405124632 )
+  INFO [685c783d] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [0216c144] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [0216c144] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [0216c144] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [f13d3695] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [f13d3695] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f13d3695] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [f13d3695] Finished in 0.031 seconds with exit status 0 (successful).
+ DEBUG [1d06b280] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405124632; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405124632'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [1d06b280] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405124632; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405124632'" 1>&2; false; fi
+ DEBUG [1d06b280] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [241140ae] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [241140ae] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405124632 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [241140ae] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [9cd8d52a] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405124632; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405124632'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [9cd8d52a] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405124632; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405124632'" 1>&2; false; fi
+ DEBUG [9cd8d52a] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [36d60a1b] Running /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader as ubuntu@62.4.19.91
+ DEBUG [36d60a1b] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405124632 && /usr/bin/env composer install --no-dev --prefer-dist --no-interaction --quiet --optimize-autoloader
+ DEBUG [36d60a1b] 	Script Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::clearCache handling the symfony-scripts event terminated with an exception
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	                                                                                                                                                                                                                                                                        
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  [RuntimeException]                                                                                                                                                                                                                                                    
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  An error occurred when executing the "'cache:clear --no-warmup'" command:                                                                                                                                                                                             
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  PHP Fatal error:  Uncaught Symfony\Component\Debug\Exception\ClassNotFoundException: Attempted to load class "SensioGeneratorBundle" from namespace "Sensio\Bundle\GeneratorBundle".                                                                                  
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  Did you forget a "use" statement for another namespace? in /home/ubuntu/symfony-demo-1/www/releases/20170405124632/app/AppKernel.php:45                                                                                                                               
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  Stack trace:                                                                                                                                                                                                                                                          
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  #0 /home/ubuntu/symfony-demo-1/www/releases/20170405124632/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(406): AppKernel->registerBundles()                                                                                                      
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  #1 /home/ubuntu/symfony-demo-1/www/releases/20170405124632/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php(113): Symfony\Component\HttpKernel\Kernel->initializeBundles()                                                                          
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  #2 /home/ubuntu/symfony-demo-1/www/releases/20170405124632/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Console/Application.php(68): Symfony\Component\HttpKernel\Kernel->boot()                                                                         
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  #3 /home/ubuntu/symfony-demo-1/www/releases/20170405124632/vendor/symfony/symfony/src/Symfony/Component/Console/Application.php(120): Symfony\Bundle\FrameworkBundle\Console in /home/ubuntu/symfony-demo-1/www/releases/20170405124632/app/AppKernel.php on line 45  
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	  .                                                                                                                                                                                                                                                                     
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	                                                                                                                                                                                                                                                                        
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	install [--prefer-source] [--prefer-dist] [--dry-run] [--dev] [--no-dev] [--no-custom-installers] [--no-autoloader] [--no-scripts] [--no-progress] [--no-suggest] [-v|vv|vvv|--verbose] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--ignore-platform-reqs] [--] [<packages>]...
+ DEBUG [36d60a1b] 	
+ DEBUG [36d60a1b] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:50:12 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [94f05bdc] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [94f05bdc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [94f05bdc] Finished in 0.895 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [0839a9a8] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [0839a9a8] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [0839a9a8] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [2d0675e4] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [2d0675e4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [2d0675e4] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [2d0675e4] Finished in 1.195 seconds with exit status 0 (successful).
+  INFO [e20ae1c5] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [e20ae1c5] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [e20ae1c5] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [f2fd2e70] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [f2fd2e70] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [f2fd2e70] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [10a7bc92] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [10a7bc92] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [10a7bc92] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [10a7bc92] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [9602cf4f] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [9602cf4f] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [9602cf4f] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [fac68dd1] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [fac68dd1] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [fac68dd1] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [f55a5317] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [f55a5317] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [f55a5317] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [78de8e39] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [78de8e39] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [78de8e39] 	Fetching origin
+  INFO [78de8e39] Finished in 1.193 seconds with exit status 0 (successful).
+ DEBUG [7f930a2f] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [7f930a2f] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [7f930a2f] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [89ffd33b] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125014 as ubuntu@62.4.19.91
+ DEBUG [89ffd33b] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125014 )
+  INFO [89ffd33b] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [4caf6228] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125014 as ubuntu@62.4.19.91
+ DEBUG [4caf6228] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125014 )
+  INFO [4caf6228] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [0fa691d3] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [0fa691d3] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [0fa691d3] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [dd885f0c] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [dd885f0c] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [dd885f0c] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [dd885f0c] Finished in 0.031 seconds with exit status 0 (successful).
+ DEBUG [e26f6d82] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125014; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125014'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [e26f6d82] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125014; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125014'" 1>&2; false; fi
+ DEBUG [e26f6d82] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [e6f58b26] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [e6f58b26] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405125014 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [e6f58b26] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [7f25ddbc] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125014 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [7f25ddbc] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125014 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [7f25ddbc] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [2c2fe0af] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [2c2fe0af] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [2c2fe0af] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [563b1d04] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [563b1d04] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [563b1d04] 	20170405121840	20170405124632	20170405125014
+ DEBUG [563b1d04] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [1784a0f0] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [1784a0f0] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [1784a0f0] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [faf71a41] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125014 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [faf71a41] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125014 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [faf71a41] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:50:37 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6fa479f0] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [6fa479f0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6fa479f0] Finished in 0.978 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [992b1b4e] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [992b1b4e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [992b1b4e] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [18f7cd92] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [18f7cd92] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [18f7cd92] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [18f7cd92] Finished in 1.398 seconds with exit status 0 (successful).
+  INFO [ee8b3723] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [ee8b3723] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [ee8b3723] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [4bc2f362] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [4bc2f362] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [4bc2f362] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [b5ec81f7] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [b5ec81f7] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [b5ec81f7] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [b5ec81f7] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [f6b9709b] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [f6b9709b] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [f6b9709b] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [84d059d7] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [84d059d7] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [84d059d7] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [a408cbd0] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [a408cbd0] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [a408cbd0] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [5d2b98ef] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [5d2b98ef] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5d2b98ef] 	Fetching origin
+  INFO [5d2b98ef] Finished in 1.389 seconds with exit status 0 (successful).
+ DEBUG [f4a828cd] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [f4a828cd] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [f4a828cd] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [c78ce05b] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125040 as ubuntu@62.4.19.91
+ DEBUG [c78ce05b] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125040 )
+  INFO [c78ce05b] Finished in 0.032 seconds with exit status 0 (successful).
+  INFO [b732fc7c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125040 as ubuntu@62.4.19.91
+ DEBUG [b732fc7c] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125040 )
+  INFO [b732fc7c] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [d40e1d3c] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [d40e1d3c] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [d40e1d3c] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [1e719cfe] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [1e719cfe] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1e719cfe] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [1e719cfe] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [62fab116] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125040; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125040'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [62fab116] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125040; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125040'" 1>&2; false; fi
+ DEBUG [62fab116] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [ec5873a5] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [ec5873a5] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405125040 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [ec5873a5] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [7a991f62] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125040 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [7a991f62] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125040 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [7a991f62] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [a3da70bb] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [a3da70bb] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [a3da70bb] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [011b485c] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [011b485c] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [011b485c] 	20170405121840	20170405124632	20170405125014	20170405125040
+ DEBUG [011b485c] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [df3fcf16] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [df3fcf16] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [df3fcf16] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [4839c5aa] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125040 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [4839c5aa] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125040 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [4839c5aa] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:52:42 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [85f79a9b] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [85f79a9b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [85f79a9b] Finished in 0.753 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [edeec210] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [edeec210] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [edeec210] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [500f5dd6] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [500f5dd6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [500f5dd6] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [500f5dd6] Finished in 1.288 seconds with exit status 0 (successful).
+  INFO [d54ebd17] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [d54ebd17] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [d54ebd17] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [43282c0e] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [43282c0e] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [43282c0e] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [63da5d67] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [63da5d67] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [63da5d67] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [63da5d67] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [dbcb62e5] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [dbcb62e5] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [dbcb62e5] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [9a8d790d] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [9a8d790d] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [9a8d790d] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [e8ab2023] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [e8ab2023] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [e8ab2023] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [2045eb97] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [2045eb97] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2045eb97] 	Fetching origin
+  INFO [2045eb97] Finished in 1.404 seconds with exit status 0 (successful).
+ DEBUG [6598cc19] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [6598cc19] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [6598cc19] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [08819891] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125244 as ubuntu@62.4.19.91
+ DEBUG [08819891] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125244 )
+  INFO [08819891] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [6e658b60] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125244 as ubuntu@62.4.19.91
+ DEBUG [6e658b60] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125244 )
+  INFO [6e658b60] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [3fe1b35b] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [3fe1b35b] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [3fe1b35b] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [6815c170] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [6815c170] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6815c170] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [6815c170] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [78b9d1aa] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125244; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125244'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [78b9d1aa] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125244; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125244'" 1>&2; false; fi
+ DEBUG [78b9d1aa] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [efd36136] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [efd36136] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405125244 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [efd36136] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [39fe3601] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125244 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [39fe3601] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125244 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [39fe3601] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [8480f1e0] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [8480f1e0] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [8480f1e0] Finished in 0.017 seconds with exit status 0 (successful).
+ DEBUG [402c2115] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [402c2115] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [402c2115] 	20170405121840	20170405124632	20170405125014	20170405125040	20170405125244
+ DEBUG [402c2115] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 5 deployed releases on 62.4.19.91
+  INFO No old releases (keeping newest 5) on 62.4.19.91
+ DEBUG [eba80442] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [eba80442] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [eba80442] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [33d46eb1] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125244 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [33d46eb1] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125244 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [33d46eb1] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:53:04 +0200 cap staging restart
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:53:16 +0200 cap staging deploy:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [45eb632f] Running /usr/bin/env sudo service php7.0-fpm restart as ubuntu@62.4.19.91
+ DEBUG [45eb632f] Command: /usr/bin/env sudo service php7.0-fpm restart
+ DEBUG [45eb632f] 	php7.0-fpm stop/waiting
+ DEBUG [45eb632f] 	php7.0-fpm start/running, process 16581
+  INFO [45eb632f] Finished in 1.058 seconds with exit status 0 (successful).
+  INFO [f2bd4bf5] Running /usr/bin/env sudo service nginx restart as ubuntu@62.4.19.91
+ DEBUG [f2bd4bf5] Command: /usr/bin/env sudo service nginx restart
+ DEBUG [f2bd4bf5] 	 * Restarting nginx nginx
+ DEBUG [f2bd4bf5] 	   ...done.
+  INFO [f2bd4bf5] Finished in 1.436 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:53:31 +0200 cap staging deploy:composer
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:54:52 +0200 cap staging deplo
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:54:55 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4151d083] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [4151d083] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4151d083] Finished in 0.675 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [6756c8e4] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [6756c8e4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [6756c8e4] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [3058ea9e] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [3058ea9e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [3058ea9e] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [3058ea9e] Finished in 1.412 seconds with exit status 0 (successful).
+  INFO [06bffb3e] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [06bffb3e] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [06bffb3e] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [93dadbec] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [93dadbec] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [93dadbec] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [ed0a3ae9] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [ed0a3ae9] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [ed0a3ae9] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [ed0a3ae9] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [a36b7df5] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [a36b7df5] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [a36b7df5] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [4ff0baa1] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [4ff0baa1] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [4ff0baa1] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [d7f9712a] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [d7f9712a] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [d7f9712a] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [1176c32b] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [1176c32b] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1176c32b] 	Fetching origin
+  INFO [1176c32b] Finished in 1.251 seconds with exit status 0 (successful).
+ DEBUG [0dbf3250] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [0dbf3250] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [0dbf3250] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [e1795ec4] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125457 as ubuntu@62.4.19.91
+ DEBUG [e1795ec4] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405125457 )
+  INFO [e1795ec4] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [4cbb6e58] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125457 as ubuntu@62.4.19.91
+ DEBUG [4cbb6e58] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405125457 )
+  INFO [4cbb6e58] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [fc4d0d3e] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [fc4d0d3e] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [fc4d0d3e] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [fe13fb73] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [fe13fb73] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [fe13fb73] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [fe13fb73] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [89e3037c] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125457; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125457'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [89e3037c] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405125457; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405125457'" 1>&2; false; fi
+ DEBUG [89e3037c] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [60e67124] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [60e67124] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405125457 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [60e67124] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [9bdde3dd] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125457 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [9bdde3dd] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405125457 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [9bdde3dd] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [f7521ea1] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [f7521ea1] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [f7521ea1] Finished in 0.017 seconds with exit status 0 (successful).
+ DEBUG [ab50369c] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [ab50369c] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [ab50369c] 	20170405121840	20170405124632	20170405125014	20170405125040	20170405125244
+20170405125457
+ DEBUG [ab50369c] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 62.4.19.91
+  INFO [88abf66d] Running /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405121840 as ubuntu@62.4.19.91
+ DEBUG [88abf66d] Command: /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405121840
+  INFO [88abf66d] Finished in 0.440 seconds with exit status 0 (successful).
+ DEBUG [f074dcdb] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [f074dcdb] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [f074dcdb] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [04f48668] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125457 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [04f48668] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405125457 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [04f48668] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:55:04 +0200 cap staging deploy:r
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 14:55:08 +0200 cap staging deploy:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [9f4903b7] Running /usr/bin/env sudo service php7.0-fpm restart as ubuntu@62.4.19.91
+ DEBUG [9f4903b7] Command: /usr/bin/env sudo service php7.0-fpm restart
+ DEBUG [9f4903b7] 	php7.0-fpm stop/waiting
+ DEBUG [9f4903b7] 	php7.0-fpm start/running, process 16976
+  INFO [9f4903b7] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [b201068f] Running /usr/bin/env sudo service nginx restart as ubuntu@62.4.19.91
+ DEBUG [b201068f] Command: /usr/bin/env sudo service nginx restart
+ DEBUG [b201068f] 	 * Restarting nginx nginx
+ DEBUG [b201068f] 	   ...done.
+  INFO [b201068f] Finished in 1.278 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:00:03 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [483b30ae] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [483b30ae] Command: /usr/bin/env mkdir -p /tmp
+  INFO [483b30ae] Finished in 0.810 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [1ae0c115] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [1ae0c115] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [1ae0c115] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [1b835d89] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [1b835d89] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [1b835d89] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [1b835d89] Finished in 3.967 seconds with exit status 0 (successful).
+  INFO [ca815826] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [ca815826] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [ca815826] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [9829b12a] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [9829b12a] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [9829b12a] Finished in 0.017 seconds with exit status 0 (successful).
+ DEBUG [39f32639] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [39f32639] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [39f32639] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [39f32639] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [b3efb1a7] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [b3efb1a7] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [b3efb1a7] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [e11cbd47] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [e11cbd47] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [e11cbd47] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [1486fd29] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [1486fd29] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [1486fd29] Finished in 0.030 seconds with exit status 0 (successful).
+  INFO [a1214d0e] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [a1214d0e] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [a1214d0e] 	Fetching origin
+  INFO [a1214d0e] Finished in 1.601 seconds with exit status 0 (successful).
+ DEBUG [bf67993e] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [bf67993e] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [bf67993e] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [da306f44] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405130008 as ubuntu@62.4.19.91
+ DEBUG [da306f44] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405130008 )
+  INFO [da306f44] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [06f8adf1] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405130008 as ubuntu@62.4.19.91
+ DEBUG [06f8adf1] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405130008 )
+  INFO [06f8adf1] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [378e5a32] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [378e5a32] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [378e5a32] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [9d562c4a] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [9d562c4a] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9d562c4a] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [9d562c4a] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [3b7db32e] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405130008; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405130008'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [3b7db32e] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405130008; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405130008'" 1>&2; false; fi
+ DEBUG [3b7db32e] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [3a9c21d9] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [3a9c21d9] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405130008 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [3a9c21d9] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [44f66fbf] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405130008 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [44f66fbf] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405130008 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [44f66fbf] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [315310a1] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [315310a1] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [315310a1] Finished in 0.019 seconds with exit status 0 (successful).
+ DEBUG [131102c3] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [131102c3] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [131102c3] 	20170405124632	20170405125014	20170405125040	20170405125244	20170405125457
+20170405130008
+ DEBUG [131102c3] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 62.4.19.91
+  INFO [ad886207] Running /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405124632 as ubuntu@62.4.19.91
+ DEBUG [ad886207] Command: /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405124632
+  INFO [ad886207] Finished in 0.399 seconds with exit status 0 (successful).
+ DEBUG [fb4f2f00] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [fb4f2f00] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [fb4f2f00] Finished in 0.035 seconds with exit status 0 (successful).
+  INFO [46513b00] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405130008 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [46513b00] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405130008 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [46513b00] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:00:14 +0200 cap staging deploy:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [f352328f] Running /usr/bin/env sudo service php7.0-fpm restart as ubuntu@62.4.19.91
+ DEBUG [f352328f] Command: /usr/bin/env sudo service php7.0-fpm restart
+ DEBUG [f352328f] 	php7.0-fpm stop/waiting
+ DEBUG [f352328f] 	php7.0-fpm start/running, process 17349
+  INFO [f352328f] Finished in 1.079 seconds with exit status 0 (successful).
+  INFO [92fc7c51] Running /usr/bin/env sudo service nginx restart as ubuntu@62.4.19.91
+ DEBUG [92fc7c51] Command: /usr/bin/env sudo service nginx restart
+ DEBUG [92fc7c51] 	 * Restarting nginx nginx
+ DEBUG [92fc7c51] 	   ...done.
+  INFO [92fc7c51] Finished in 1.135 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:01:35 +0200 cap staging deploy:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [eef109c1] Running /usr/bin/env sudo service php7.0-fpm restart as ubuntu@62.4.19.91
+ DEBUG [eef109c1] Command: /usr/bin/env sudo service php7.0-fpm restart
+ DEBUG [eef109c1] 	php7.0-fpm stop/waiting
+ DEBUG [eef109c1] 	php7.0-fpm start/running, process 17532
+  INFO [eef109c1] Finished in 0.838 seconds with exit status 0 (successful).
+  INFO [7cc036f5] Running /usr/bin/env sudo service nginx restart as ubuntu@62.4.19.91
+ DEBUG [7cc036f5] Command: /usr/bin/env sudo service nginx restart
+ DEBUG [7cc036f5] 	 * Restarting nginx nginx
+ DEBUG [7cc036f5] 	   ...done.
+  INFO [7cc036f5] Finished in 1.434 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:01:48 +0200 cap staging deploy:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [401626c1] Running /usr/bin/env sudo service php7.0-fpm restart as ubuntu@62.4.19.91
+ DEBUG [401626c1] Command: /usr/bin/env sudo service php7.0-fpm restart
+ DEBUG [401626c1] 	php7.0-fpm stop/waiting
+ DEBUG [401626c1] 	php7.0-fpm start/running, process 17641
+  INFO [401626c1] Finished in 1.138 seconds with exit status 0 (successful).
+  INFO [a51ce436] Running /usr/bin/env sudo service nginx restart as ubuntu@62.4.19.91
+ DEBUG [a51ce436] Command: /usr/bin/env sudo service nginx restart
+ DEBUG [a51ce436] 	 * Restarting nginx nginx
+ DEBUG [a51ce436] 	   ...done.
+  INFO [a51ce436] Finished in 1.437 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:01:57 +0200 cap staging deploy:restart
+  INFO ---------------------------------------------------------------------------
+  INFO [15ae852b] Running /usr/bin/env sudo service php7.0-fpm restart as ubuntu@62.4.19.91
+ DEBUG [15ae852b] Command: /usr/bin/env sudo service php7.0-fpm restart
+ DEBUG [15ae852b] 	php7.0-fpm stop/waiting
+ DEBUG [15ae852b] 	php7.0-fpm start/running, process 17750
+  INFO [15ae852b] Finished in 0.813 seconds with exit status 0 (successful).
+  INFO [e3fde31c] Running /usr/bin/env sudo service nginx restart as ubuntu@62.4.19.91
+ DEBUG [e3fde31c] Command: /usr/bin/env sudo service nginx restart
+ DEBUG [e3fde31c] 	 * Restarting nginx nginx
+ DEBUG [e3fde31c] 	   ...done.
+  INFO [e3fde31c] Finished in 1.231 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:05:35 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a71dc488] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [a71dc488] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a71dc488] Finished in 0.786 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [53467e0b] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [53467e0b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [53467e0b] Finished in 0.028 seconds with exit status 0 (successful).
+  INFO [9b81be79] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [9b81be79] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [9b81be79] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [9b81be79] Finished in 1.203 seconds with exit status 0 (successful).
+  INFO [b5e5cb73] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [b5e5cb73] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [b5e5cb73] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [30ff510f] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [30ff510f] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [30ff510f] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [94ee68d9] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [94ee68d9] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [94ee68d9] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [94ee68d9] Finished in 0.027 seconds with exit status 0 (successful).
+ DEBUG [341c6a6e] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [341c6a6e] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [341c6a6e] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [53760aec] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [53760aec] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [53760aec] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [2b6a4467] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [2b6a4467] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [2b6a4467] Finished in 0.031 seconds with exit status 0 (successful).
+  INFO [7247125d] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [7247125d] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7247125d] 	Fetching origin
+  INFO [7247125d] Finished in 1.359 seconds with exit status 0 (successful).
+ DEBUG [c80b7ec0] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [c80b7ec0] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [c80b7ec0] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [bbb6117a] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405130538 as ubuntu@62.4.19.91
+ DEBUG [bbb6117a] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405130538 )
+  INFO [bbb6117a] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [19bace38] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405130538 as ubuntu@62.4.19.91
+ DEBUG [19bace38] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405130538 )
+  INFO [19bace38] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [dce474f3] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [dce474f3] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [dce474f3] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [a3e2ff8c] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [a3e2ff8c] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a3e2ff8c] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [a3e2ff8c] Finished in 0.040 seconds with exit status 0 (successful).
+ DEBUG [f6bbc9f0] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405130538; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405130538'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [f6bbc9f0] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405130538; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405130538'" 1>&2; false; fi
+ DEBUG [f6bbc9f0] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [1a7a56c4] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [1a7a56c4] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405130538 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [1a7a56c4] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [ddd2e634] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405130538 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [ddd2e634] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405130538 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [ddd2e634] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [9a29f7a1] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [9a29f7a1] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [9a29f7a1] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [a8b929f8] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [a8b929f8] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [a8b929f8] 	20170405125014	20170405125040	20170405125244	20170405125457	20170405130008
+20170405130538
+ DEBUG [a8b929f8] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 62.4.19.91
+  INFO [d096de02] Running /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125014 as ubuntu@62.4.19.91
+ DEBUG [d096de02] Command: /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125014
+  INFO [d096de02] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [757db3ca] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [757db3ca] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [757db3ca] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [ac447c14] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405130538 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [ac447c14] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405130538 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [ac447c14] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:06:46 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a32b8e3b] Running if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [a32b8e3b] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi
+ DEBUG [a32b8e3b] Finished in 0.465 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:07:09 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4152355d] Running if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [4152355d] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi
+ DEBUG [4152355d] Finished in 0.847 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:07:39 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [76e50655] Running if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [76e50655] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi
+ DEBUG [76e50655] Finished in 0.945 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:09:05 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [29857f3d] Running if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [29857f3d] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi
+ DEBUG [29857f3d] Finished in 0.598 seconds with exit status 0 (successful).
+  INFO [a45b6193] Running composer install as ubuntu@62.4.19.91
+ DEBUG [a45b6193] Command: composer install
+ DEBUG [a45b6193] 	Composer could not find a composer.json file in /home/ubuntu
+To initialize a project, please create a composer.json file as described in the https://getcomposer.org/ "Getting Started" section
+ DEBUG [a45b6193] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:12:29 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+ DEBUG [160d9416] Running if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [160d9416] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/current/; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/current/'" 1>&2; false; fi
+ DEBUG [160d9416] Finished in 0.994 seconds with exit status 0 (successful).
+  INFO [548d5c4a] Running /usr/bin/env pwd as ubuntu@62.4.19.91
+ DEBUG [548d5c4a] Command: cd /home/ubuntu/symfony-demo-1/www/current/ && /usr/bin/env pwd
+ DEBUG [548d5c4a] 	/home/ubuntu/symfony-demo-1/www/releases/20170405130538
+  INFO [548d5c4a] Finished in 0.033 seconds with exit status 0 (successful).
+  INFO [a87fa168] Running composer install as ubuntu@62.4.19.91
+ DEBUG [a87fa168] Command: composer install
+ DEBUG [a87fa168] 	Composer could not find a composer.json file in /home/ubuntu
+To initialize a project, please create a composer.json file as described in the https://getcomposer.org/ "Getting Started" section
+ DEBUG [a87fa168] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:14:48 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+  INFO [2f4f167b] Running cd /home/ubuntu/symfony-demo-1/www/current/ as ubuntu@62.4.19.91
+ DEBUG [2f4f167b] Command: cd /home/ubuntu/symfony-demo-1/www/current/
+  INFO [2f4f167b] Finished in 0.944 seconds with exit status 0 (successful).
+  INFO [6c69ee0b] Running composer install as ubuntu@62.4.19.91
+ DEBUG [6c69ee0b] Command: composer install
+ DEBUG [6c69ee0b] 	Composer could not find a composer.json file in /home/ubuntu
+To initialize a project, please create a composer.json file as described in the https://getcomposer.org/ "Getting Started" section
+ DEBUG [6c69ee0b] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:15:15 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+  INFO [6c7befec] Running cd /home/ubuntu/symfony-demo-1/www/current/ && composer install as ubuntu@62.4.19.91
+ DEBUG [6c7befec] Command: cd /home/ubuntu/symfony-demo-1/www/current/ && composer install
+ DEBUG [6c7befec] 	Loading composer repositories with package information
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	Nothing to install or update
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	Generating autoload files
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	> Incenteev\ParameterHandler\ScriptHandler::buildParameters
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	Updating the "app/config/parameters.yml" file
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::buildBootstrap
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::clearCache
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 // Clearing the cache for the dev environment with debug                       
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 // true                                                                        
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 [OK] Cache for the "dev" environment (debug=true) was successfully cleared.    
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installAssets
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 Trying to install assets as relative symbolic links.
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 --- ------------------------------ ------------------ 
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	      Bundle                         Method / Error    
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 --- ------------------------------ ------------------ 
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	  ✔   WhiteOctoberPagerfantaBundle   relative symlink  
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 --- ------------------------------ ------------------ 
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	 [OK] All assets were successfully installed.                                   
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
+ DEBUG [6c7befec] 	
+ DEBUG [6c7befec] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::prepareDeploymentTarget
+ DEBUG [6c7befec] 	
+  INFO [6c7befec] Finished in 2.251 seconds with exit status 0 (successful).
+  INFO [73e66ebf] Running composer install as ubuntu@62.4.19.91
+ DEBUG [73e66ebf] Command: composer install
+ DEBUG [73e66ebf] 	Composer could not find a composer.json file in /home/ubuntu
+To initialize a project, please create a composer.json file as described in the https://getcomposer.org/ "Getting Started" section
+ DEBUG [73e66ebf] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:15:39 +0200 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2e69ee63] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [2e69ee63] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2e69ee63] Finished in 0.743 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [fd1f6bfe] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [fd1f6bfe] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [fd1f6bfe] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [545834f5] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [545834f5] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [545834f5] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [545834f5] Finished in 1.420 seconds with exit status 0 (successful).
+  INFO [5a7d5a71] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [5a7d5a71] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [5a7d5a71] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [70ea8b39] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [70ea8b39] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [70ea8b39] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [4b196059] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [4b196059] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [4b196059] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [4b196059] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [7ae1c674] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [7ae1c674] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [7ae1c674] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [7e3f6942] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [7e3f6942] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [7e3f6942] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [869a2623] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [869a2623] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [869a2623] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [95b818fa] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [95b818fa] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [95b818fa] 	Fetching origin
+  INFO [95b818fa] Finished in 1.386 seconds with exit status 0 (successful).
+ DEBUG [f5354c5b] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [f5354c5b] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [f5354c5b] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [efc65dc7] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405131541 as ubuntu@62.4.19.91
+ DEBUG [efc65dc7] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405131541 )
+  INFO [efc65dc7] Finished in 0.029 seconds with exit status 0 (successful).
+  INFO [dba17494] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405131541 as ubuntu@62.4.19.91
+ DEBUG [dba17494] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405131541 )
+  INFO [dba17494] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [23bfe85e] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [23bfe85e] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [23bfe85e] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [970269d6] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [970269d6] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [970269d6] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [970269d6] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [0f9979b5] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405131541; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405131541'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [0f9979b5] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405131541; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405131541'" 1>&2; false; fi
+ DEBUG [0f9979b5] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [9e7d55ed] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [9e7d55ed] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405131541 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [9e7d55ed] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [b35493c7] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405131541 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [b35493c7] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405131541 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [b35493c7] Finished in 0.027 seconds with exit status 0 (successful).
+  INFO [4c1e7918] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [4c1e7918] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [4c1e7918] Finished in 0.019 seconds with exit status 0 (successful).
+ DEBUG [697921a9] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [697921a9] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [697921a9] 	20170405125040	20170405125244	20170405125457	20170405130008	20170405130538
+20170405131541
+ DEBUG [697921a9] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 62.4.19.91
+  INFO [95b6facd] Running /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125040 as ubuntu@62.4.19.91
+ DEBUG [95b6facd] Command: /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125040
+  INFO [95b6facd] Finished in 0.026 seconds with exit status 0 (successful).
+ DEBUG [cdc39b05] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [cdc39b05] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [cdc39b05] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [d7516222] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405131541 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [d7516222] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405131541 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [d7516222] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:15:48 +0200 cap staging composer:install
+  INFO ---------------------------------------------------------------------------
+  INFO [8ef6c52f] Running cd /home/ubuntu/symfony-demo-1/www/current/ && composer install as ubuntu@62.4.19.91
+ DEBUG [8ef6c52f] Command: cd /home/ubuntu/symfony-demo-1/www/current/ && composer install
+ DEBUG [8ef6c52f] 	Loading composer repositories with package information
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	Package operations: 65 installs, 0 updates, 0 removals
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/annotations (v1.2.7): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing twig/twig (v1.32.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-util (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing paragonie/random_compat (v2.0.9): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-php70 (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-php56 (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-mbstring (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/symfony (v3.2.5): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-intl-icu (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing psr/log (1.0.2): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing psr/cache (1.0.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/inflector (v1.1.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/collections (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/cache (v1.6.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/common (v2.6.2): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/doctrine-cache-bundle (1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing jdorn/sql-formatter (v1.2.17): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/dbal (v2.5.12): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/doctrine-bundle (1.6.7): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/data-fixtures (v1.1.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/doctrine-fixtures-bundle (2.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/instantiator (1.0.5): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing doctrine/orm (v2.5.6): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing erusev/parsedown (1.6.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing ezyang/htmlpurifier (v4.9.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing incenteev/composer-parameter-handler (v2.1.2): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sensiolabs/security-checker (v4.0.2): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sensio/distribution-bundle (v5.0.18): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sensio/framework-extra-bundle (v3.0.23): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing monolog/monolog (1.22.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/monolog-bundle (v3.0.3): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-apcu (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing swiftmailer/swiftmailer (v5.4.6): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/swiftmailer-bundle (v2.5.3): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing twig/extensions (v1.4.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing pagerfanta/pagerfanta (v1.0.4): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing white-october/pagerfanta-bundle (v1.0.8): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sebastian/version (1.0.6): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sebastian/global-state (1.1.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sebastian/recursion-context (1.0.5): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sebastian/exporter (1.2.2): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sebastian/environment (1.3.8): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sebastian/diff (1.4.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sebastian/comparator (1.2.4): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpunit/php-text-template (1.2.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpunit/phpunit-mock-objects (2.3.8): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpunit/php-timer (1.0.9): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpunit/php-file-iterator (1.4.2): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpunit/php-token-stream (1.4.11): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpunit/php-code-coverage (2.2.4): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing webmozart/assert (1.2.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpdocumentor/reflection-common (1.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpdocumentor/type-resolver (0.2.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpdocumentor/reflection-docblock (3.1.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpspec/prophecy (v1.7.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing phpunit/phpunit (4.8.35): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing dama/doctrine-test-bundle (v1.0.10): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-xml (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing ircmaxell/password-compat (v1.0.4): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-php55 (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/polyfill-php54 (v1.3.0): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing friendsofphp/php-cs-fixer (v2.1.1): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing sensio/generator-bundle (v3.1.3): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  - Installing symfony/phpunit-bridge (v3.2.5): 
+ DEBUG [8ef6c52f] 	Loading from cache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	doctrine/doctrine-cache-bundle suggests installing symfony/security-acl (For using this bundle to cache ACLs)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	doctrine/data-fixtures suggests installing doctrine/mongodb-odm (For loading MongoDB ODM fixtures)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	doctrine/data-fixtures suggests installing doctrine/phpcr-odm (For loading PHPCR ODM fixtures)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	sensio/framework-extra-bundle suggests installing symfony/psr-http-message-bridge (To use the PSR-7 converters)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	pagerfanta/pagerfanta suggests installing doctrine/mongodb-odm (To use the DoctrineODMMongoDBAdapter.)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	pagerfanta/pagerfanta suggests installing doctrine/phpcr-odm (To use the DoctrineODMPhpcrAdapter. >= 1.1.0)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	pagerfanta/pagerfanta suggests installing mandango/mandango (To use the MandangoAdapter.)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	pagerfanta/pagerfanta suggests installing propel/propel1 (To use the PropelAdapter)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	pagerfanta/pagerfanta suggests installing solarium/solarium (To use the SolariumAdapter.)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	Generating autoload files
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	> Incenteev\ParameterHandler\ScriptHandler::buildParameters
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	Creating the "app/config/parameters.yml" file
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::buildBootstrap
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::clearCache
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 // Clearing the cache for the dev environment with debug                       
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 // true                                                                        
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 [OK] Cache for the "dev" environment (debug=true) was successfully cleared.    
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installAssets
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 Trying to install assets as relative symbolic links.
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 --- ------------------------------ ------------------ 
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	      Bundle                         Method / Error    
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 --- ------------------------------ ------------------ 
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	  ✔   WhiteOctoberPagerfantaBundle   relative symlink  
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 --- ------------------------------ ------------------ 
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	 [OK] All assets were successfully installed.                                   
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
+ DEBUG [8ef6c52f] 	
+ DEBUG [8ef6c52f] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::prepareDeploymentTarget
+ DEBUG [8ef6c52f] 	
+  INFO [8ef6c52f] Finished in 5.749 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:17:21 +0200 cap staging deploy composer:install
+  INFO ---------------------------------------------------------------------------
+  INFO [98ff2eb7] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [98ff2eb7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [98ff2eb7] Finished in 0.954 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [a4dc3ef3] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [a4dc3ef3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [a4dc3ef3] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [6b082321] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [6b082321] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [6b082321] 	407d4a6e239dc46dffb507797ed6becc52b7b945	HEAD
+  INFO [6b082321] Finished in 1.397 seconds with exit status 0 (successful).
+  INFO [bfbd1daa] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [bfbd1daa] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [bfbd1daa] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [eac60871] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [eac60871] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [eac60871] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [4e8f711f] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [4e8f711f] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [4e8f711f] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [4e8f711f] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [65064fb4] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [65064fb4] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [65064fb4] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [146fe73f] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [146fe73f] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [146fe73f] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [5d4ae563] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [5d4ae563] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [5d4ae563] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [d0aa75c6] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [d0aa75c6] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d0aa75c6] 	Fetching origin
+  INFO [d0aa75c6] Finished in 1.382 seconds with exit status 0 (successful).
+ DEBUG [9c871683] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [9c871683] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [9c871683] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [8b86a63d] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405131724 as ubuntu@62.4.19.91
+ DEBUG [8b86a63d] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405131724 )
+  INFO [8b86a63d] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [cc38f23c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405131724 as ubuntu@62.4.19.91
+ DEBUG [cc38f23c] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405131724 )
+  INFO [cc38f23c] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [35b5d6c2] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [35b5d6c2] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [35b5d6c2] Finished in 0.021 seconds with exit status 0 (successful).
+ DEBUG [ff832d49] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [ff832d49] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [ff832d49] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [ff832d49] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [a41fb4c6] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405131724; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405131724'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [a41fb4c6] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405131724; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405131724'" 1>&2; false; fi
+ DEBUG [a41fb4c6] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [235b72ce] Running /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [235b72ce] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405131724 && /usr/bin/env echo "407d4a6e239dc46dffb507797ed6becc52b7b945" >> REVISION
+  INFO [235b72ce] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [09c33146] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405131724 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [09c33146] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405131724 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [09c33146] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [7e9e6f0d] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [7e9e6f0d] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [7e9e6f0d] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [e71a70b8] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [e71a70b8] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [e71a70b8] 	20170405125244	20170405125457	20170405130008	20170405130538	20170405131541
+20170405131724
+ DEBUG [e71a70b8] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 62.4.19.91
+  INFO [bd1639ed] Running /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125244 as ubuntu@62.4.19.91
+ DEBUG [bd1639ed] Command: /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125244
+  INFO [bd1639ed] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [5fd9cdc6] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [5fd9cdc6] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [5fd9cdc6] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [60d54e94] Running /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405131724 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [60d54e94] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 407d4a6e239dc46dffb507797ed6becc52b7b945) deployed as release 20170405131724 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [60d54e94] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [942f7574] Running cd /home/ubuntu/symfony-demo-1/www/current/ && composer install as ubuntu@62.4.19.91
+ DEBUG [942f7574] Command: cd /home/ubuntu/symfony-demo-1/www/current/ && composer install
+ DEBUG [942f7574] 	Loading composer repositories with package information
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	Package operations: 65 installs, 0 updates, 0 removals
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/annotations (v1.2.7): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing twig/twig (v1.32.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-util (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing paragonie/random_compat (v2.0.9): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-php70 (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-php56 (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-mbstring (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/symfony (v3.2.5): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-intl-icu (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing psr/log (1.0.2): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing psr/cache (1.0.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/inflector (v1.1.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/collections (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/cache (v1.6.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/common (v2.6.2): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/doctrine-cache-bundle (1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing jdorn/sql-formatter (v1.2.17): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/dbal (v2.5.12): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/doctrine-bundle (1.6.7): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/data-fixtures (v1.1.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/doctrine-fixtures-bundle (2.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/instantiator (1.0.5): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing doctrine/orm (v2.5.6): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing erusev/parsedown (1.6.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing ezyang/htmlpurifier (v4.9.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing incenteev/composer-parameter-handler (v2.1.2): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sensiolabs/security-checker (v4.0.2): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sensio/distribution-bundle (v5.0.18): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sensio/framework-extra-bundle (v3.0.23): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing monolog/monolog (1.22.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/monolog-bundle (v3.0.3): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-apcu (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing swiftmailer/swiftmailer (v5.4.6): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/swiftmailer-bundle (v2.5.3): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing twig/extensions (v1.4.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing pagerfanta/pagerfanta (v1.0.4): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing white-october/pagerfanta-bundle (v1.0.8): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sebastian/version (1.0.6): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sebastian/global-state (1.1.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sebastian/recursion-context (1.0.5): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sebastian/exporter (1.2.2): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sebastian/environment (1.3.8): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sebastian/diff (1.4.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sebastian/comparator (1.2.4): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpunit/php-text-template (1.2.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpunit/phpunit-mock-objects (2.3.8): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpunit/php-timer (1.0.9): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpunit/php-file-iterator (1.4.2): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpunit/php-token-stream (1.4.11): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpunit/php-code-coverage (2.2.4): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing webmozart/assert (1.2.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpdocumentor/reflection-common (1.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpdocumentor/type-resolver (0.2.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpdocumentor/reflection-docblock (3.1.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpspec/prophecy (v1.7.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing phpunit/phpunit (4.8.35): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing dama/doctrine-test-bundle (v1.0.10): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-xml (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing ircmaxell/password-compat (v1.0.4): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-php55 (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/polyfill-php54 (v1.3.0): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing friendsofphp/php-cs-fixer (v2.1.1): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing sensio/generator-bundle (v3.1.3): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  - Installing symfony/phpunit-bridge (v3.2.5): 
+ DEBUG [942f7574] 	Loading from cache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	doctrine/doctrine-cache-bundle suggests installing symfony/security-acl (For using this bundle to cache ACLs)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	doctrine/data-fixtures suggests installing doctrine/mongodb-odm (For loading MongoDB ODM fixtures)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	doctrine/data-fixtures suggests installing doctrine/phpcr-odm (For loading PHPCR ODM fixtures)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	sensio/framework-extra-bundle suggests installing symfony/psr-http-message-bridge (To use the PSR-7 converters)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	pagerfanta/pagerfanta suggests installing doctrine/mongodb-odm (To use the DoctrineODMMongoDBAdapter.)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	pagerfanta/pagerfanta suggests installing doctrine/phpcr-odm (To use the DoctrineODMPhpcrAdapter. >= 1.1.0)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	pagerfanta/pagerfanta suggests installing mandango/mandango (To use the MandangoAdapter.)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	pagerfanta/pagerfanta suggests installing propel/propel1 (To use the PropelAdapter)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	pagerfanta/pagerfanta suggests installing solarium/solarium (To use the SolariumAdapter.)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	Generating autoload files
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	> Incenteev\ParameterHandler\ScriptHandler::buildParameters
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	Creating the "app/config/parameters.yml" file
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::buildBootstrap
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::clearCache
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 // Clearing the cache for the dev environment with debug                       
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 // true                                                                        
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 [OK] Cache for the "dev" environment (debug=true) was successfully cleared.    
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installAssets
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 Trying to install assets as relative symbolic links.
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 --- ------------------------------ ------------------ 
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	      Bundle                         Method / Error    
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 --- ------------------------------ ------------------ 
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	  ✔   WhiteOctoberPagerfantaBundle   relative symlink  
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 --- ------------------------------ ------------------ 
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	 [OK] All assets were successfully installed.                                   
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
+ DEBUG [942f7574] 	
+ DEBUG [942f7574] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::prepareDeploymentTarget
+ DEBUG [942f7574] 	
+  INFO [942f7574] Finished in 15.629 seconds with exit status 0 (successful).

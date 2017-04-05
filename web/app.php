@@ -27,7 +27,7 @@ if (PHP_VERSION_ID < 70000) {
 // If your web server provides APC support for PHP applications, uncomment these
 // lines to use APC for class autoloading. This can improve application performance
 // very significantly. See http://symfony.com/doc/current/components/class_loader/cache_class_loader.html#apcclassloader
-
+umask(0000);
 // NOTE: The first argument of ApcClassLoader() is the prefix used to prevent
 // cache key conflicts. In a real Symfony application, make sure to change
 // it to a value that it's unique in the web server. A common practice is to use
