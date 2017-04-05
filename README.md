@@ -10,7 +10,7 @@ Capistrano (Automatic deployment)
 ------------
 
 ```bash
-$ cap staging deploy composer:install
+$ cap staging deploy composer:install deploy:restart
 ```
 
 Requirements
