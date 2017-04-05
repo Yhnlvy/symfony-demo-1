@@ -8,7 +8,10 @@ to develop Symfony applications following the recommended best practices.
 
 Capistrano (Automatic deployment)
 ------------
+
+```bash
 $ cap staging deploy composer:install
+```
 
 Requirements
 ------------
