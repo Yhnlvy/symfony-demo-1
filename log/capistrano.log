@@ -2186,3 +2186,766 @@ To initialize a project, please create a composer.json file as described in the 
  DEBUG [942f7574] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::prepareDeploymentTarget
  DEBUG [942f7574] 	
   INFO [942f7574] Finished in 15.629 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:35:16 +0200 cap staging deploy composer:install
+  INFO ---------------------------------------------------------------------------
+  INFO [2bdfed71] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [2bdfed71] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2bdfed71] Finished in 0.945 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [51565269] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [51565269] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [51565269] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [866023bc] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [866023bc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [866023bc] 	253d163761d192e6ff3494f249a671b2d33c6b6f	HEAD
+  INFO [866023bc] Finished in 1.411 seconds with exit status 0 (successful).
+  INFO [1ca8229a] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [1ca8229a] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [1ca8229a] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [7220f5b3] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [7220f5b3] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [7220f5b3] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [8669d3fb] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [8669d3fb] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [8669d3fb] 	407d4a6e239dc46dffb507797ed6becc52b7b945
+ DEBUG [8669d3fb] Finished in 0.017 seconds with exit status 0 (successful).
+ DEBUG [40ff18a9] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [40ff18a9] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [40ff18a9] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [6c475d20] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [6c475d20] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [6c475d20] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [047a09c1] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [047a09c1] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [047a09c1] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [d06c9c6a] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [d06c9c6a] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d06c9c6a] 	Fetching origin
+ DEBUG [d06c9c6a] 	From github.com:Yhnlvy/symfony-demo-1
+ DEBUG [d06c9c6a] 	   407d4a6..253d163  master     -> master
+  INFO [d06c9c6a] Finished in 2.029 seconds with exit status 0 (successful).
+ DEBUG [b90afed3] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [b90afed3] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [b90afed3] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [e5a10899] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405133518 as ubuntu@62.4.19.91
+ DEBUG [e5a10899] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405133518 )
+  INFO [e5a10899] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [edd0db91] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405133518 as ubuntu@62.4.19.91
+ DEBUG [edd0db91] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405133518 )
+  INFO [edd0db91] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [547669ea] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [547669ea] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [547669ea] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [8d362fe4] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [8d362fe4] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8d362fe4] 	253d163761d192e6ff3494f249a671b2d33c6b6f
+ DEBUG [8d362fe4] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [2a2af469] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405133518; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405133518'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [2a2af469] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405133518; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405133518'" 1>&2; false; fi
+ DEBUG [2a2af469] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [1a7c4dfa] Running /usr/bin/env echo "253d163761d192e6ff3494f249a671b2d33c6b6f" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [1a7c4dfa] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405133518 && /usr/bin/env echo "253d163761d192e6ff3494f249a671b2d33c6b6f" >> REVISION
+  INFO [1a7c4dfa] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [a08140f2] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405133518 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [a08140f2] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405133518 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [a08140f2] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [4c067dbf] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [4c067dbf] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [4c067dbf] Finished in 0.019 seconds with exit status 0 (successful).
+ DEBUG [02a84f00] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [02a84f00] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [02a84f00] 	20170405125457	20170405130008	20170405130538	20170405131541	20170405131724
+20170405133518
+ DEBUG [02a84f00] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 62.4.19.91
+  INFO [f200571d] Running /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125457 as ubuntu@62.4.19.91
+ DEBUG [f200571d] Command: /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405125457
+  INFO [f200571d] Finished in 0.030 seconds with exit status 0 (successful).
+ DEBUG [7986f03b] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [7986f03b] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [7986f03b] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [8f623da5] Running /usr/bin/env echo "Branch master (at 253d163761d192e6ff3494f249a671b2d33c6b6f) deployed as release 20170405133518 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [8f623da5] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 253d163761d192e6ff3494f249a671b2d33c6b6f) deployed as release 20170405133518 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [8f623da5] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [9b35fef1] Running cd /home/ubuntu/symfony-demo-1/www/current/ && composer install as ubuntu@62.4.19.91
+ DEBUG [9b35fef1] Command: cd /home/ubuntu/symfony-demo-1/www/current/ && composer install
+ DEBUG [9b35fef1] 	Loading composer repositories with package information
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	Package operations: 65 installs, 0 updates, 0 removals
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/annotations (v1.2.7): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing twig/twig (v1.32.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-util (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing paragonie/random_compat (v2.0.9): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-php70 (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-php56 (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-mbstring (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/symfony (v3.2.5): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-intl-icu (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing psr/log (1.0.2): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing psr/cache (1.0.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/inflector (v1.1.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/collections (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/cache (v1.6.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/common (v2.6.2): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/doctrine-cache-bundle (1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing jdorn/sql-formatter (v1.2.17): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/dbal (v2.5.12): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/doctrine-bundle (1.6.7): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/data-fixtures (v1.1.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/doctrine-fixtures-bundle (2.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/instantiator (1.0.5): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing doctrine/orm (v2.5.6): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing erusev/parsedown (1.6.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing ezyang/htmlpurifier (v4.9.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing incenteev/composer-parameter-handler (v2.1.2): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sensiolabs/security-checker (v4.0.2): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sensio/distribution-bundle (v5.0.18): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sensio/framework-extra-bundle (v3.0.23): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing monolog/monolog (1.22.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/monolog-bundle (v3.0.3): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-apcu (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing swiftmailer/swiftmailer (v5.4.6): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/swiftmailer-bundle (v2.5.3): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing twig/extensions (v1.4.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing pagerfanta/pagerfanta (v1.0.4): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing white-october/pagerfanta-bundle (v1.0.8): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sebastian/version (1.0.6): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sebastian/global-state (1.1.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sebastian/recursion-context (1.0.5): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sebastian/exporter (1.2.2): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sebastian/environment (1.3.8): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sebastian/diff (1.4.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sebastian/comparator (1.2.4): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpunit/php-text-template (1.2.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpunit/phpunit-mock-objects (2.3.8): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpunit/php-timer (1.0.9): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpunit/php-file-iterator (1.4.2): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpunit/php-token-stream (1.4.11): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpunit/php-code-coverage (2.2.4): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing webmozart/assert (1.2.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpdocumentor/reflection-common (1.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpdocumentor/type-resolver (0.2.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpdocumentor/reflection-docblock (3.1.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpspec/prophecy (v1.7.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing phpunit/phpunit (4.8.35): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing dama/doctrine-test-bundle (v1.0.10): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-xml (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing ircmaxell/password-compat (v1.0.4): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-php55 (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/polyfill-php54 (v1.3.0): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing friendsofphp/php-cs-fixer (v2.1.1): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing sensio/generator-bundle (v3.1.3): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  - Installing symfony/phpunit-bridge (v3.2.5): 
+ DEBUG [9b35fef1] 	Loading from cache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	doctrine/doctrine-cache-bundle suggests installing symfony/security-acl (For using this bundle to cache ACLs)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	doctrine/data-fixtures suggests installing doctrine/mongodb-odm (For loading MongoDB ODM fixtures)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	doctrine/data-fixtures suggests installing doctrine/phpcr-odm (For loading PHPCR ODM fixtures)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	sensio/framework-extra-bundle suggests installing symfony/psr-http-message-bridge (To use the PSR-7 converters)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	pagerfanta/pagerfanta suggests installing doctrine/mongodb-odm (To use the DoctrineODMMongoDBAdapter.)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	pagerfanta/pagerfanta suggests installing doctrine/phpcr-odm (To use the DoctrineODMPhpcrAdapter. >= 1.1.0)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	pagerfanta/pagerfanta suggests installing mandango/mandango (To use the MandangoAdapter.)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	pagerfanta/pagerfanta suggests installing propel/propel1 (To use the PropelAdapter)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	pagerfanta/pagerfanta suggests installing solarium/solarium (To use the SolariumAdapter.)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	Generating autoload files
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	> Incenteev\ParameterHandler\ScriptHandler::buildParameters
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	Creating the "app/config/parameters.yml" file
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::buildBootstrap
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::clearCache
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 // Clearing the cache for the dev environment with debug                       
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 // true                                                                        
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 [OK] Cache for the "dev" environment (debug=true) was successfully cleared.    
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installAssets
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 Trying to install assets as relative symbolic links.
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 --- ------------------------------ ------------------ 
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	      Bundle                         Method / Error    
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 --- ------------------------------ ------------------ 
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	  ✔   WhiteOctoberPagerfantaBundle   relative symlink  
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 --- ------------------------------ ------------------ 
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	 [OK] All assets were successfully installed.                                   
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
+ DEBUG [9b35fef1] 	
+ DEBUG [9b35fef1] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::prepareDeploymentTarget
+ DEBUG [9b35fef1] 	
+  INFO [9b35fef1] Finished in 5.962 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-05 15:37:09 +0200 cap staging deploy composer:install
+  INFO ---------------------------------------------------------------------------
+  INFO [4edb9abc] Running /usr/bin/env mkdir -p /tmp as ubuntu@62.4.19.91
+ DEBUG [4edb9abc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4edb9abc] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SymfonyDemo-staging-yohan.sh 100.0%
+  INFO [8487990e] Running /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh as ubuntu@62.4.19.91
+ DEBUG [8487990e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SymfonyDemo-staging-yohan.sh
+  INFO [8487990e] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [f5cb0b6d] Running /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD as ubuntu@62.4.19.91
+ DEBUG [f5cb0b6d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git ls-remote git@github.com:Yhnlvy/symfony-demo-1.git HEAD )
+ DEBUG [f5cb0b6d] 	253d163761d192e6ff3494f249a671b2d33c6b6f	HEAD
+  INFO [f5cb0b6d] Finished in 1.422 seconds with exit status 0 (successful).
+  INFO [2ac12a31] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [2ac12a31] Command: /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/shared /home/ubuntu/symfony-demo-1/www/releases
+  INFO [2ac12a31] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [0f0e1551] Running [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ] as ubuntu@62.4.19.91
+ DEBUG [0f0e1551] Command: [ -f /home/ubuntu/symfony-demo-1/www/current/REVISION ]
+ DEBUG [0f0e1551] Finished in 0.017 seconds with exit status 0 (successful).
+ DEBUG [58b1a9c4] Running /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null as ubuntu@62.4.19.91
+ DEBUG [58b1a9c4] Command: /usr/bin/env cat /home/ubuntu/symfony-demo-1/www/current/REVISION 2>/dev/null
+ DEBUG [58b1a9c4] 	253d163761d192e6ff3494f249a671b2d33c6b6f
+ DEBUG [58b1a9c4] Finished in 0.017 seconds with exit status 0 (successful).
+ DEBUG [1e6f8bc7] Running [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ] as ubuntu@62.4.19.91
+ DEBUG [1e6f8bc7] Command: [ -f /home/ubuntu/symfony-demo-1/www/repo/HEAD ]
+ DEBUG [1e6f8bc7] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/symfony-demo-1/www/repo
+ DEBUG [1951bda4] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [1951bda4] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [1951bda4] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [4a314546] Running /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git as ubuntu@62.4.19.91
+ DEBUG [4a314546] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote set-url origin git@github.com:Yhnlvy/symfony-demo-1.git )
+  INFO [4a314546] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [461376cb] Running /usr/bin/env git remote update --prune as ubuntu@62.4.19.91
+ DEBUG [461376cb] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [461376cb] 	Fetching origin
+  INFO [461376cb] Finished in 1.413 seconds with exit status 0 (successful).
+ DEBUG [9d41fc1e] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [9d41fc1e] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [9d41fc1e] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [c4983741] Running /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405133711 as ubuntu@62.4.19.91
+ DEBUG [c4983741] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/symfony-demo-1/www/releases/20170405133711 )
+  INFO [c4983741] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [82f77699] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405133711 as ubuntu@62.4.19.91
+ DEBUG [82f77699] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/symfony-demo-1/www/releases/20170405133711 )
+  INFO [82f77699] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [fd4c15ba] Running if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [fd4c15ba] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/repo; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/repo'" 1>&2; false; fi
+ DEBUG [fd4c15ba] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [a86a2b3b] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@62.4.19.91
+ DEBUG [a86a2b3b] Command: cd /home/ubuntu/symfony-demo-1/www/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SymfonyDemo-staging-yohan.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a86a2b3b] 	253d163761d192e6ff3494f249a671b2d33c6b6f
+ DEBUG [a86a2b3b] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [f2f0aacd] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405133711; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405133711'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [f2f0aacd] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases/20170405133711; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases/20170405133711'" 1>&2; false; fi
+ DEBUG [f2f0aacd] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [c606fe2d] Running /usr/bin/env echo "253d163761d192e6ff3494f249a671b2d33c6b6f" >> REVISION as ubuntu@62.4.19.91
+ DEBUG [c606fe2d] Command: cd /home/ubuntu/symfony-demo-1/www/releases/20170405133711 && /usr/bin/env echo "253d163761d192e6ff3494f249a671b2d33c6b6f" >> REVISION
+  INFO [c606fe2d] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [55747dc1] Running /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405133711 /home/ubuntu/symfony-demo-1/www/releases/current as ubuntu@62.4.19.91
+ DEBUG [55747dc1] Command: /usr/bin/env ln -s /home/ubuntu/symfony-demo-1/www/releases/20170405133711 /home/ubuntu/symfony-demo-1/www/releases/current
+  INFO [55747dc1] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [3f5ae4ac] Running /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www as ubuntu@62.4.19.91
+ DEBUG [3f5ae4ac] Command: /usr/bin/env mv /home/ubuntu/symfony-demo-1/www/releases/current /home/ubuntu/symfony-demo-1/www
+  INFO [3f5ae4ac] Finished in 0.020 seconds with exit status 0 (successful).
+ DEBUG [1501ce98] Running /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases as ubuntu@62.4.19.91
+ DEBUG [1501ce98] Command: /usr/bin/env ls -x /home/ubuntu/symfony-demo-1/www/releases
+ DEBUG [1501ce98] 	20170405130008	20170405130538	20170405131541	20170405131724	20170405133518
+20170405133711
+ DEBUG [1501ce98] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 62.4.19.91
+  INFO [6248a343] Running /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405130008 as ubuntu@62.4.19.91
+ DEBUG [6248a343] Command: /usr/bin/env rm -rf /home/ubuntu/symfony-demo-1/www/releases/20170405130008
+  INFO [6248a343] Finished in 0.028 seconds with exit status 0 (successful).
+ DEBUG [56f46f6b] Running if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi as ubuntu@62.4.19.91
+ DEBUG [56f46f6b] Command: if test ! -d /home/ubuntu/symfony-demo-1/www/releases; then echo "Directory does not exist '/home/ubuntu/symfony-demo-1/www/releases'" 1>&2; false; fi
+ DEBUG [56f46f6b] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [49ae75e9] Running /usr/bin/env echo "Branch master (at 253d163761d192e6ff3494f249a671b2d33c6b6f) deployed as release 20170405133711 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log as ubuntu@62.4.19.91
+ DEBUG [49ae75e9] Command: cd /home/ubuntu/symfony-demo-1/www/releases && /usr/bin/env echo "Branch master (at 253d163761d192e6ff3494f249a671b2d33c6b6f) deployed as release 20170405133711 by yohan" >> /home/ubuntu/symfony-demo-1/www/revisions.log
+  INFO [49ae75e9] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [0f544c12] Running cd /home/ubuntu/symfony-demo-1/www/current/ && composer install as ubuntu@62.4.19.91
+ DEBUG [0f544c12] Command: cd /home/ubuntu/symfony-demo-1/www/current/ && composer install
+ DEBUG [0f544c12] 	Loading composer repositories with package information
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	Installing dependencies (including require-dev) from lock file
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	Package operations: 65 installs, 0 updates, 0 removals
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/lexer (v1.0.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/annotations (v1.2.7): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing twig/twig (v1.32.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-util (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing paragonie/random_compat (v2.0.9): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-php70 (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-php56 (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-mbstring (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/symfony (v3.2.5): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-intl-icu (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing psr/log (1.0.2): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing psr/cache (1.0.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/inflector (v1.1.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/collections (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/cache (v1.6.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/common (v2.6.2): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/doctrine-cache-bundle (1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing jdorn/sql-formatter (v1.2.17): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/dbal (v2.5.12): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/doctrine-bundle (1.6.7): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/data-fixtures (v1.1.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/doctrine-fixtures-bundle (2.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/instantiator (1.0.5): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing doctrine/orm (v2.5.6): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing erusev/parsedown (1.6.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing ezyang/htmlpurifier (v4.9.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing incenteev/composer-parameter-handler (v2.1.2): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sensiolabs/security-checker (v4.0.2): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sensio/distribution-bundle (v5.0.18): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sensio/framework-extra-bundle (v3.0.23): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing monolog/monolog (1.22.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/monolog-bundle (v3.0.3): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-apcu (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing swiftmailer/swiftmailer (v5.4.6): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/swiftmailer-bundle (v2.5.3): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing twig/extensions (v1.4.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing pagerfanta/pagerfanta (v1.0.4): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing white-october/pagerfanta-bundle (v1.0.8): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sebastian/version (1.0.6): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sebastian/global-state (1.1.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sebastian/recursion-context (1.0.5): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sebastian/exporter (1.2.2): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sebastian/environment (1.3.8): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sebastian/diff (1.4.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sebastian/comparator (1.2.4): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpunit/php-text-template (1.2.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpunit/phpunit-mock-objects (2.3.8): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpunit/php-timer (1.0.9): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpunit/php-file-iterator (1.4.2): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpunit/php-token-stream (1.4.11): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpunit/php-code-coverage (2.2.4): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing webmozart/assert (1.2.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpdocumentor/reflection-common (1.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpdocumentor/type-resolver (0.2.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpdocumentor/reflection-docblock (3.1.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpspec/prophecy (v1.7.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing phpunit/phpunit (4.8.35): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing dama/doctrine-test-bundle (v1.0.10): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-xml (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing ircmaxell/password-compat (v1.0.4): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-php55 (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/polyfill-php54 (v1.3.0): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing friendsofphp/php-cs-fixer (v2.1.1): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing sensio/generator-bundle (v3.1.3): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  - Installing symfony/phpunit-bridge (v3.2.5): 
+ DEBUG [0f544c12] 	Loading from cache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	doctrine/doctrine-cache-bundle suggests installing symfony/security-acl (For using this bundle to cache ACLs)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	doctrine/data-fixtures suggests installing doctrine/mongodb-odm (For loading MongoDB ODM fixtures)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	doctrine/data-fixtures suggests installing doctrine/phpcr-odm (For loading PHPCR ODM fixtures)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	sensio/framework-extra-bundle suggests installing symfony/psr-http-message-bridge (To use the PSR-7 converters)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	pagerfanta/pagerfanta suggests installing doctrine/mongodb-odm (To use the DoctrineODMMongoDBAdapter.)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	pagerfanta/pagerfanta suggests installing doctrine/phpcr-odm (To use the DoctrineODMPhpcrAdapter. >= 1.1.0)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	pagerfanta/pagerfanta suggests installing mandango/mandango (To use the MandangoAdapter.)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	pagerfanta/pagerfanta suggests installing propel/propel1 (To use the PropelAdapter)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	pagerfanta/pagerfanta suggests installing solarium/solarium (To use the SolariumAdapter.)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	Generating autoload files
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	> Incenteev\ParameterHandler\ScriptHandler::buildParameters
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	Creating the "app/config/parameters.yml" file
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::buildBootstrap
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::clearCache
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 // Clearing the cache for the dev environment with debug                       
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 // true                                                                        
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 [OK] Cache for the "dev" environment (debug=true) was successfully cleared.    
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installAssets
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 Trying to install assets as relative symbolic links.
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 --- ------------------------------ ------------------ 
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	      Bundle                         Method / Error    
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 --- ------------------------------ ------------------ 
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	  ✔   WhiteOctoberPagerfantaBundle   relative symlink  
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 --- ------------------------------ ------------------ 
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	 [OK] All assets were successfully installed.                                   
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
+ DEBUG [0f544c12] 	
+ DEBUG [0f544c12] 	> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::prepareDeploymentTarget
+ DEBUG [0f544c12] 	
+  INFO [0f544c12] Finished in 6.303 seconds with exit status 0 (successful).
+  INFO [e3f1b29c] Running chmod -R 777 /home/ubuntu/symfony-demo-1 as ubuntu@62.4.19.91
+ DEBUG [e3f1b29c] Command: chmod -R 777 /home/ubuntu/symfony-demo-1
+  INFO [e3f1b29c] Finished in 8.068 seconds with exit status 0 (successful).

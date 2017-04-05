@@ -47,7 +47,8 @@ namespace :deploy do
   desc 'Composer Install - Get Bundles'
   task :install do
     on roles(:app) do
-        execute "cd /home/ubuntu/symfony-demo-1/www/current/ && composer install"    
+        execute "cd /home/ubuntu/symfony-demo-1/www/current/ && composer install"   
+        execute "chmod -R 777 /home/ubuntu/symfony-demo-1" 
     end
   end
 end
